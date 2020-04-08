@@ -11,8 +11,10 @@ Clone Netflix (Movie Discovery App.)
 
 ## API Verbs
 
-- [ ] Now Playing (Movie)
-- [ ] Upcoming (Movie)
-- [ ] Airing Today (TV)
-- [ ] Top Rated (Movie / TV)
-- [ ] Popular (Movie / TV) 
+- [x] Now Playing (Movie)
+- [x] Upcoming (Movie)
+- [x] Airing Today (TV)
+- [x] Top Rated (Movie / TV)
+- [x] Popular (Movie / TV) 
+- [ ] TV Show Detail
+- [ ] Movie Detail
