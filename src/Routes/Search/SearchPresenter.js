@@ -5,9 +5,10 @@ import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Message from "../../Components/Message";
 import Poster from "../../Components/Poster";
+import Helmets from "react-helmet";
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px;
 `;
 
 const Form = styled.form`
@@ -31,6 +32,9 @@ const SearchPresenter = ({
   updateTerm,
 }) => (
   <Container>
+    <Helmets>
+      <title>Search | Haflix</title>
+    </Helmets>
     <Form onSubmit={handleSubmit}>
       <Input
         placeholder="Search Movies or TV Shows..."
