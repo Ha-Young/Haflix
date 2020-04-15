@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled.div``;
-
+const Container = styled.div`
+  font-size: 12px;
+`;
 const ImageContainer = styled.div``;
 
 const Image = styled.div``;
