@@ -15,7 +15,7 @@ export default createGlobalStyle`
         font-size: 12px;
         background-color: rgba(34, 47, 62, 1.0);
         color: white;
-        padding-top: 80px;
+        padding-top:50px;
     }
 `;
 
