@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/haflix/static/js/main.30b55011.chunk.js",
+    "main.js.map": "/haflix/static/js/main.30b55011.chunk.js.map",
+    "runtime-main.js": "/haflix/static/js/runtime-main.45372bcd.js",
+    "runtime-main.js.map": "/haflix/static/js/runtime-main.45372bcd.js.map",
+    "static/js/2.d990b13f.chunk.js": "/haflix/static/js/2.d990b13f.chunk.js",
+    "static/js/2.d990b13f.chunk.js.map": "/haflix/static/js/2.d990b13f.chunk.js.map",
+    "index.html": "/haflix/index.html",
+    "precache-manifest.8634230d7711364c22fbb9ba5c5ccba5.js": "/haflix/precache-manifest.8634230d7711364c22fbb9ba5c5ccba5.js",
+    "service-worker.js": "/haflix/service-worker.js",
+    "static/js/2.d990b13f.chunk.js.LICENSE.txt": "/haflix/static/js/2.d990b13f.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/haflix/static/media/noPosterSmall.87a0eb6a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45372bcd.js",
+    "static/js/2.d990b13f.chunk.js",
+    "static/js/main.30b55011.chunk.js"
+  ]
+}
