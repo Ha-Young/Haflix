@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Helmets from "react-helmet";
+import Ratings from "react-ratings-declarative";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -68,6 +69,18 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Imdb = styled.a`
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  width: 26px;
+  height: 16px;
+  border-radius: 2px;
+  background-image: url(${props => props.src});
+  background-position: center center;
+  background-size: cover;
+`;
+
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
     <>
@@ -120,6 +133,52 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name} / `
                 )}
             </Item>
+            <Divider>•</Divider>
+            {result.imdb_id && (
+              <>
+                <Item>
+                  <Imdb
+                    href={`https://www.imdb.com/title/${result.imdb_id}`}
+                    target={"_blank"}
+                    src={require("../../assets/imdb.png")}
+                  />
+                </Item>
+                <Divider>•</Divider>
+              </>
+            )}
+            {result.vote_average && parseFloat(result.vote_average) / 2 > 0 ? (
+              <Item>
+                <Ratings rating={parseFloat(result.vote_average) / 2}>
+                  <Ratings.Widget
+                    widgetRatedColor="rgb(255,215,0)"
+                    widgetDimension="15px"
+                    widgetSpacing="0px"
+                  />
+                  <Ratings.Widget
+                    widgetRatedColor="rgb(255,215,0)"
+                    widgetDimension="15px"
+                    widgetSpacing="0px"
+                  />
+                  <Ratings.Widget
+                    widgetRatedColor="rgb(255,215,0)"
+                    widgetDimension="15px"
+                    widgetSpacing="0px"
+                  />
+                  <Ratings.Widget
+                    widgetRatedColor="rgb(255,215,0)"
+                    widgetDimension="15px"
+                    widgetSpacing="0px"
+                  />
+                  <Ratings.Widget
+                    widgetRatedColor="rgb(255,215,0)"
+                    widgetDimension="15px"
+                    widgetSpacing="0px"
+                  />
+                </Ratings>
+              </Item>
+            ) : (
+              "No Data"
+            )}
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
