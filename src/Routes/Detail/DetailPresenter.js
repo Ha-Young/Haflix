@@ -251,7 +251,7 @@ const DetailPresenter = ({ result, loading, error }) =>
           {result.production_countries && (
             <Countries>
               {result.production_countries.map((country) => (
-                <Country>
+                <Country key={country.name}>
                   <span role="img" aria-label={country.name}>
                     🇺🇸
                   </span>

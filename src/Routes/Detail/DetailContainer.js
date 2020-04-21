@@ -15,6 +15,8 @@ export default class extends React.Component {
       loading: true,
       isMovie: pathname.includes("/movie/"),
     };
+    console.log("construct");
+    console.log(this.state);
   }
 
   async componentDidMount() {
