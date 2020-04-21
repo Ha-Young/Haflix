@@ -76,9 +76,53 @@ const Imdb = styled.a`
   width: 26px;
   height: 16px;
   border-radius: 2px;
-  background-image: url(${props => props.src});
+  background-image: url(${(props) => props.src});
   background-position: center center;
   background-size: cover;
+`;
+
+const ProductCompanies = styled.div`
+  margin-top: 20px;
+  width: auto;
+  height: 50px;
+  display: flex;
+`;
+
+const ProductCompany = styled.div`
+  margin: 10px;
+  width: 100px;
+  height: 25px;
+  background-image: url(${(props) => props.bgImage});
+  background-size: cover;
+  background-position: center center;
+`;
+
+const Countries = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+`;
+
+const Country = styled.div`
+  height: 20px;
+  margin-right: 5px;
+  opacity: 0.7;
+  font-size: 18px;
+`;
+
+const Videos = styled.div`
+  margin-top: 20px;
+  width: 100%;
+  height: 40%;
+  float: left;
+`;
+
+const Video = styled.iframe`
+  width: 320px;
+  height: 240px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #000;
 `;
 
 const DetailPresenter = ({ result, loading, error }) =>
@@ -135,17 +179,15 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
             <Divider>•</Divider>
             {result.imdb_id && (
-              <>
-                <Item>
-                  <Imdb
-                    href={`https://www.imdb.com/title/${result.imdb_id}`}
-                    target={"_blank"}
-                    src={require("../../assets/imdb.png")}
-                  />
-                </Item>
-                <Divider>•</Divider>
-              </>
+              <Item>
+                <Imdb
+                  href={`https://www.imdb.com/title/${result.imdb_id}`}
+                  target={"_blank"}
+                  src={require("../../assets/imdb.png")}
+                />
+              </Item>
             )}
+            <Divider>•</Divider>
             {result.vote_average && parseFloat(result.vote_average) / 2 > 0 ? (
               <Item>
                 <Ratings rating={parseFloat(result.vote_average) / 2}>
@@ -181,6 +223,57 @@ const DetailPresenter = ({ result, loading, error }) =>
             )}
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+
+          <ProductCompanies>
+          {!result.production_companies &&
+          result.production_companies[0].logo_path === null
+            ? result.networks.map(
+                (network, index) =>
+                  index < 4 && (
+                    <ProductCompany
+                      key={network.id}
+                      bgImage={`https://image.tmdb.org/t/p/original${network.logo_path}`}
+                    />
+                  )
+              )
+            : result.production_companies.map(
+                (company, index) =>
+                  index < 4 && (
+                    <ProductCompany
+                      key={company.id}
+                      bgImage={`https://image.tmdb.org/t/p/original${company.logo_path}`}
+                    />
+                  )
+              )}
+          </ProductCompanies>
+          
+
+          {result.production_countries && (
+            <Countries>
+              {result.production_countries.map((country) => (
+                <Country>
+                  <span role="img" aria-label={country.name}>
+                    🇺🇸
+                  </span>
+                  {country.name}
+                </Country>
+              ))}
+            </Countries>
+          )}
+
+          {result.videos && (
+            <Videos>
+              {result.videos.results.map(
+                (video, index) =>
+                  index <= 1 && (
+                    <Video
+                      key={video.id}
+                      src={`https://www.youtube.com/embed/${video.key}`}
+                    />
+                  )
+              )}
+            </Videos>
+          )}
         </Data>
       </Content>
     </Container>
