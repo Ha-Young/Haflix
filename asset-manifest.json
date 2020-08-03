@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.d6a65f76.chunk.js",
-    "main.js.map": "/static/js/main.d6a65f76.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ea3aa46f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ea3aa46f.js.map",
-    "static/js/2.1b5e31fd.chunk.js": "/static/js/2.1b5e31fd.chunk.js",
-    "static/js/2.1b5e31fd.chunk.js.map": "/static/js/2.1b5e31fd.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ae0a636a25a0e9af3596c6ea324ca6fe.js": "/precache-manifest.ae0a636a25a0e9af3596c6ea324ca6fe.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.1b5e31fd.chunk.js.LICENSE.txt": "/static/js/2.1b5e31fd.chunk.js.LICENSE.txt",
-    "static/media/noPosterSmall.png": "/static/media/noPosterSmall.87a0eb6a.png"
+    "main.js": "/Haflix/static/js/main.d6a65f76.chunk.js",
+    "main.js.map": "/Haflix/static/js/main.d6a65f76.chunk.js.map",
+    "runtime-main.js": "/Haflix/static/js/runtime-main.015a802f.js",
+    "runtime-main.js.map": "/Haflix/static/js/runtime-main.015a802f.js.map",
+    "static/js/2.217b1748.chunk.js": "/Haflix/static/js/2.217b1748.chunk.js",
+    "static/js/2.217b1748.chunk.js.map": "/Haflix/static/js/2.217b1748.chunk.js.map",
+    "index.html": "/Haflix/index.html",
+    "precache-manifest.d9726b1fd515140af6c81aef4487756f.js": "/Haflix/precache-manifest.d9726b1fd515140af6c81aef4487756f.js",
+    "service-worker.js": "/Haflix/service-worker.js",
+    "static/js/2.217b1748.chunk.js.LICENSE.txt": "/Haflix/static/js/2.217b1748.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/Haflix/static/media/noPosterSmall.87a0eb6a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea3aa46f.js",
-    "static/js/2.1b5e31fd.chunk.js",
+    "static/js/runtime-main.015a802f.js",
+    "static/js/2.217b1748.chunk.js",
     "static/js/main.d6a65f76.chunk.js"
   ]
 }
