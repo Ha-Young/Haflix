@@ -1,6 +1,9 @@
 # Haflix
 
 Clone Netflix (Movie Discovery App.)
+## Deploy
+- [Netlify](https://brave-villani-eaebbb.netlify.app/)
+- [GhPage](https://ha-young.github.io/Haflix)
 
 ## Screens
 
